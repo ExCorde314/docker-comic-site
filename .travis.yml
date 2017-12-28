@@ -1,0 +1,11 @@
+language: bash
+services: docker
+
+install:
+  - git clone https://github.com/ExCorde314/docker-comic-site.git
+
+script:
+  - travis_retry docker build -t
+
+after_script:
+  - docker images
