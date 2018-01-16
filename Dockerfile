@@ -11,8 +11,9 @@ RUN apt-get update && \
 RUN pip install --upgrade pip \ 
     && pip install "django==1.10" \ 
     && pip install "mysqlclient==1.3.8" \
-    && pip install "django-tinymce==2.7.0" \
-    && pip install "pillow==4.3.0"
+    && pip install "pillow==4.3.0" \
+    && pip install "mistune==0.8.3" \
+    && pip install "bleach==2.1.2"
 
 ENV LANG=en_US.UTF-8 PYTHONHASHSEED=random \
     PATH=/usr/local/python/bin:/usr/local/apache/bin:$PATH \
