@@ -9,11 +9,12 @@ RUN apt-get update && \
             rm -r /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip \ 
-    && pip install "django==1.10" \ 
-    && pip install "mysqlclient==1.3.8" \
-    && pip install "pillow==4.3.0" \
+    && pip install "django==2.0" \ 
+    && pip install "mysqlclient==1.3.12" \
+    && pip install "pillow==5.0" \
     && pip install "mistune==0.8.3" \
-    && pip install "bleach==2.1.2"
+    && pip install "bleach==2.1.2" \
+    && pip install "django-htmlmin==0.10.0"
 
 ENV LANG=en_US.UTF-8 PYTHONHASHSEED=random \
     PATH=/usr/local/python/bin:/usr/local/apache/bin:$PATH \
